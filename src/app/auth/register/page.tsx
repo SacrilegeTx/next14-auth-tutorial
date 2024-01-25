@@ -1,9 +1,13 @@
+import { Suspense } from 'react';
+
 import { RegisterForm } from '@/components/auth/RegisterForm';
 
 function RegisterPage() {
   return (
     <div>
-      <RegisterForm />
+      <Suspense fallback="Loading...">
+        <RegisterForm />
+      </Suspense>
     </div>
   );
 }
